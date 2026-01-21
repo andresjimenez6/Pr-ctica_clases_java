@@ -23,9 +23,9 @@ public Pedido(int importe, Productos[] productos){
     this.productos = productos.clone();
 }
 // Constructor de copia
-public Pedido(Pedido pato){
-    this.importe = pato.importe;
-    this.productos = pato.productos.clone();
+public Pedido(Pedido pedidoACopiar){
+    this.importe = pedidoACopiar.importe;
+    this.productos = pedidoACopiar.productos.clone();
 }
 // Declaración de getters (1 por atributo)
 public int getImporte(){
@@ -52,9 +52,9 @@ public boolean añadirProducto(){
         carrito[i] = this.productos[i];
     }
 
-
+    return true;
 }
 // Declaración toString() (con @Override)
-    
-    
 
+
+}
