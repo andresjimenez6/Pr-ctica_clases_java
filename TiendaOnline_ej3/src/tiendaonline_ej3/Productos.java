@@ -51,10 +51,15 @@ public void setPrecio(int precio){
 }
 
 
-// DeclaraciÃ³n de mÃ©todos personalizados
+// Declaracion de metodos personalizados
     
-// DeclaraciÃ³n toString() (con @Override)
-
-
+// Declaracion toString() (con @Override)
+    
+@Override
+public String toString(){
+    String cadena = "Nombre del producto: " + this.nombre +
+            "\n Precio: " + this.precio;
+    
+}
 }
 

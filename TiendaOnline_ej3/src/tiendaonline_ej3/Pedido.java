@@ -42,17 +42,33 @@ public void setImporte( int importe){
     this.importe = importe;
 }
 // Declaración de métodos personalizados
-public boolean añadirProducto(){
+public boolean aniadirProducto(Productos productos){
     
-    
-    Productos[] carrito = new Productos[this.productos.length+1];
+    Productos[] carrito = new Productos[this.productos.length + 1];
     
     
     for (int i = 0; i < carrito.length -1; i++) {
         carrito[i] = this.productos[i];
     }
-
+    
+    carrito[carrito.length - 1] = productos;
+    
+    
+    
     return true;
+}
+
+public int totalAcumulado(Productos[] productos){
+    int total = 0;
+    
+    for (int i = 0; i < productos.length; i++) {
+        
+        total += productos[i].getPrecio();
+        
+    }
+    
+    return total;
+    
 }
 // Declaración toString() (con @Override)
 
