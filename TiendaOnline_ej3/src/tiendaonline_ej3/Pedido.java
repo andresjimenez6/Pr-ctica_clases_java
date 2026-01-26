@@ -53,7 +53,7 @@ public boolean aniadirProducto(Productos productos){
     
     carrito[carrito.length - 1] = productos;
     
-    
+    this.setProductos(carrito);
     
     return true;
 }
@@ -72,5 +72,10 @@ public int totalAcumulado(Productos[] productos){
 }
 // Declaración toString() (con @Override)
 
+public String toString(){
+    String compra = "Cantidad de objetos: " + this.productos.length + "\n" +
+            "Importe total= " + totalAcumulado(this.productos);
+    return compra;
+}
 
 }

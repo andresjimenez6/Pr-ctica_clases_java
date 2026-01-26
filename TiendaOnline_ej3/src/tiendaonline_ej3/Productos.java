@@ -53,6 +53,8 @@ public void setPrecio(int precio){
 
 // Declaracion de metodos personalizados
     
+
+
 // Declaracion toString() (con @Override)
     
 @Override
@@ -60,6 +62,7 @@ public String toString(){
     String cadena = "Nombre del producto: " + this.nombre +
             "\n Precio: " + this.precio;
     
+    return cadena;
 }
 }
 
