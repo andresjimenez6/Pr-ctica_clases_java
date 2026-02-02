@@ -50,7 +50,6 @@ public void setPrecio(int precio){
      this.precio = precio;
 }
 
-
 // Declaracion de metodos personalizados
     
 

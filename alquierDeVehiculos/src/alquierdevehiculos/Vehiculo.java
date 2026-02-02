@@ -53,7 +53,7 @@ public class Vehiculo {
         return modelo;
     }
 
-    public boolean isDisponible() {
+    public boolean getDisponible() {
         return disponible;
     }
     
