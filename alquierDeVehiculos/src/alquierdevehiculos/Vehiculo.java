@@ -78,12 +78,12 @@ public class Vehiculo {
     //Declaracion de metodods
     
     //toString
-    
+    @Override
     public String toString(){
         String vehiculo = "Matricula : " + this.matricula + "\n" +
                 "Marca: " + this.marca + "\n" +
                 "modelo: " + this.modelo + "\n" +
-                "Disponible: " + this.marca;
+                "Disponible: " + this.disponible;
                 
         return vehiculo;
     }

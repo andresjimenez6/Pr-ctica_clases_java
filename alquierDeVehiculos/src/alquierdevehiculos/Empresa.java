@@ -59,11 +59,10 @@ public boolean alquilarVehiculo(Vehiculo vehiculos){
 }
 
     //toString
-@Override
-public String toString(){
-    
-    String hola = "dsasadas";
-    
-    return hola;
-    
+
+    @Override
+    public String toString() {
+        return "Empresa{" + "vehiculos=" + vehiculos + '}';
+    }
+
 }

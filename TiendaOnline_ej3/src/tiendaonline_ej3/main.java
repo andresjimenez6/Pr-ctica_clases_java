@@ -52,7 +52,7 @@ public class main {
         System.out.println("NOMBRE ESPERADO: Entrecot -> " + carne.getNombre());
         System.out.println("PRECIO ESPERADO: 10 -> " + carne.getPrecio());
         
-        // Probamos los setters de la clase Alumno
+        // Probamos los setters de la clase producto
         System.out.println();
         System.out.println("PRUEBA DE SETTERS DE PRODUCTOS");
         productoPorDefecto.setNombre("Caja de aguacates 4 ud.");
@@ -68,11 +68,11 @@ public class main {
         compraSemanal.aniadirProducto(queso);
         compraSemanal.aniadirProducto(carne);
        
-        // Prueba getter array alumnos
+        // Prueba getter array productos
         System.out.println();
         System.out.println("PRUEBA DE GETTERS CON UN ARRAY DE PRODUCTOS");
         Productos[] productos = compraSemanal.getProductos();
-        System.out.println("Número de alumnos esperado: 4 -> " + 
+        System.out.println("Número de productos esperado: 4 -> " + 
                 productos.length);
         for (int i = 0; i < productos.length; i++) {
             System.out.println("Producto " + (i + 1) + ": " + productos[i].getNombre());
