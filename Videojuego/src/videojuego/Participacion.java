@@ -20,14 +20,20 @@ public class Participacion {
     
     public Participacion (Participacion participacionACopiar){
         this.jugador= participacionACopiar.jugador;
-        this.partida = particaACopiar.partida;
+        this.partida = participacionACopiar.partida;
     }
-    
-    //metodos personalizados
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public Partida getPartida() {
+        return partida;
+    }
     
     //toString con Override
     @Override
     public String toString(){
-    return "El jugador " + this.jugador + " ha participado ";
+    return "El jugador " + this.jugador + " ha participado en la partida = "+ this.partida;
     }
 }
