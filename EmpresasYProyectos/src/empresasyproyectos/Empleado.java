@@ -21,14 +21,14 @@ public class Empleado {
         precioHora= 12.5 ;
     }
     public Empleado(String nombre, int salario, double precioHora){
-        nombre = this.nombre;
-        salario = this.salario;
-        precioHora = this.precioHora;
+        this.nombre = nombre;
+        this.salario = salario;
+        this.precioHora = precioHora;
     }
     public Empleado(Empleado empleadoACopiar){
-        nombre = empleadoACopiar.nombre;
-        salario =empleadoACopiar.salario;
-        precioHora = empleadoACopiar.precioHora;
+        this.nombre = empleadoACopiar.nombre;
+        this.salario =empleadoACopiar.salario;
+        this.precioHora = empleadoACopiar.precioHora;
     }
 
     public String getNombre() {
@@ -57,6 +57,6 @@ public class Empleado {
     
     @Override
     public String toString() {
-        return "Empleado{" + "nombre=" + nombre + ", salario=" + salario + ", precioHora=" + precioHora + '}';
+        return "Empleado" + "nombre=" + nombre + "\n salario=" + salario + "\n precioHora=" + precioHora;
     }
 }

@@ -13,22 +13,24 @@ public class Proyecto {
     private String nombre;
     private int presup;
     private Empleado[] empleados;
-    private 
-    
+    private Participacion[] part;
     public Proyecto(){
         this.nombre ="";
         this.presup = 0;
         this.empleados = new Empleado[0];
+        this.part = new Participacion[empleados.length];
     }
-    public Proyecto (String nombre, int presup, Empleado[] empleados){
+    public Proyecto (String nombre, int presup, Empleado[] empleados, Participacion[] part){
         nombre = this.nombre;
         presup = this.presup;
         empleados = this.empleados;
+        part= this.part;
     }
     public Proyecto(Proyecto proyectoACopiar){
         nombre = proyectoACopiar.nombre;
         presup = proyectoACopiar.presup;
         empleados=proyectoACopiar.empleados;
+        part=proyectoACopiar.part;
     }
 
     public void setNombre(String nombre) {
@@ -42,6 +44,11 @@ public class Proyecto {
     public void setEmpleados(Empleado[] empleados) {
         this.empleados = empleados;
     }
+
+    public void setPart(Participacion[] part) {
+        this.part = part;
+    }
+    
     
     public String getNombre() {
         return nombre;
@@ -53,6 +60,10 @@ public class Proyecto {
     
     public Empleado[] getEmpleados() {
         return empleados;
+    }
+
+    public Participacion[] getPart() {
+        return part;
     }
     
     //Metodos personalizados
@@ -73,17 +84,17 @@ public class Proyecto {
         return true;
 }
     
-    public double costeTotal(Empleado[] empleados){
+    public double costeTotal(Empleado[] empleados, Participacion[] part){
         double total=0;
         for (int i = 0; i < empleados.length; i++) {
-             total+= this.empleados[i].getPrecioHora() ;
+             total+= this.empleados[i].getPrecioHora() * this.part[i].getHorasAsignadas();
         }
         return total;
     }
     
     @Override
     public String toString() {
-        return "Proyecto{" + "nombre=" + nombre + ", presup=" + presup + '}';
+        return "Proyecto{" + "nombre = " + nombre + ", presupuesto = " + presup + '}';
     }
     
 }
