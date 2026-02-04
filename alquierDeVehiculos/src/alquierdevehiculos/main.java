@@ -46,7 +46,7 @@ public class main {
     //prueba getter array vehiculos
     
     System.out.println();
-    System.out.println("PRUEBA DE GETTERS CON UN ARRAY DE PRODUCTOS");
+    System.out.println("PRUEBA DE GETTERS CON UN ARRAY DE VEHICULOS");
     Vehiculo[] vehiculos = crestaNevada.getVehiculos();
     System.out.println("Número de coches esperado: 2 -> " + 
              vehiculos.length);
